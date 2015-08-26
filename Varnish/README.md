@@ -20,9 +20,11 @@ sed -i 's/VirtualHost \*:80/VirtualHost \*:8080/g' /etc/apache2/sites-available/
 Make the configuration files
 
 ```
-curl -s http://setup.blaketest.co.uk/Varnish/default.vcl > /etc/varnish/default.vcl
+curl -s https://raw.githubusercontent.com/blakesmoore/varnish-vcl-collection/master/wordpress-example.vcl > /etc/varnish/default.vcl
 mkdir /etc/varnish/lib/
-curl -s http://setup.blaketest.co.uk/Varnish/lib/purge.vcl > /etc/varnish/lib/purge.vcl
+curl -s https://raw.githubusercontent.com/blakesmoore/varnish-vcl-collection/master/lib/purge.vcl > /etc/varnish/lib/purge.vcl
+curl -s https://raw.githubusercontent.com/blakesmoore/varnish-vcl-collection/master/lib/static.vcl > /etc/varnish/lib/static.vcl
+curl -s https://raw.githubusercontent.com/blakesmoore/varnish-vcl-collection/master/lib/xforward.vcl > /etc/varnish/lib/xforward.vcl
 ```
 
 You can monitor the Varnish log by running the below on both servers, We'll cover this later in the training.
