@@ -156,7 +156,7 @@ performance.readdir-ahead: on
 
 ```
 modprobe fuse
-echo 'glus1:/gvol0 /var/www/vhosts glusterfs defaults,acl,_netdev 0 0' >> /etc/fstab
+echo 'glus1:/gvol0 /var/www/vhosts glusterfs defaults,acl,_netdev,backup-volfile-servers=glus2 0 0' >> /etc/fstab
 mkdir -p /var/www/vhosts
 mount /var/www/vhosts
 ```
@@ -165,7 +165,7 @@ mount /var/www/vhosts
 
 ```
 modprobe fuse
-echo 'glus1:/gvol0 /var/www/vhosts glusterfs defaults,acl,_netdev 0 0' >> /etc/fstab
+echo 'glus2:/gvol0 /var/www/vhosts glusterfs defaults,acl,_netdev,backup-volfile-servers=glus1 0 0' >> /etc/fstab
 mkdir -p /var/www/vhosts
 mount /var/www/vhosts
 ```
