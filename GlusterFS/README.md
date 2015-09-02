@@ -13,7 +13,7 @@ We're adding these as an alias of the IP address for convenience. Open /etc/host
 
 *Make sure you modify the IP addressses to the correct IP.*
 
-Now we need to ensure they can 'talk' to eachother, run the below:
+Now we need to ensure they can 'talk' to each other, run the below:
 
 ```
 ping -c2 glus1; ping -c2 glus2
@@ -23,7 +23,7 @@ ping -c2 glus1; ping -c2 glus2
 
 Ensure the Block Storage volumes you created earlier are attached to the servers.
 
-#### Create the partitiion table
+#### Create the partition table
 
 You'll need to run the below in order to create the primary partition
 
